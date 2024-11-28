@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brainerzz Signup Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="signup-header">
+        <h1>Brainerzz</h1>
+        <div class="buttons">
+            <button onclick="window.location.href='index.html'">Home</button>
+            <button onclick="window.location.href='login.html'">Login</button>
+        </div>
+    </header>
+
+    <!-- Signup Section -->
+    <div class="signup-container">
+        <h2>Create Your Account</h2>
+        <p class="signup-description">Join us and start exploring personalized learning tools.</p>
+        <form action="#" method="POST" class="signup-form">
+            
+            <label for="full-name">Full Name <span class="required">*</span></label>
+            <input type="text" id="full-name" name="full-name" placeholder="John Doe" required>
+
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="youremail@example.com" required>
+
+            <label for="password">Password <span class="required">*</span></label>
+            <input type="password" id="password" name="password" placeholder="Create a password" required>
+            <div id="password-strength" class="password-strength"></div>
+
+            <label for="confirm-password">Confirm Password <span class="required">*</span></label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+            <div id="password-error" class="password-error"></div>
+
+            <button type="submit" class="signup-btn">Sign Up</button>
+        </form>
+
+        <div class="terms-and-privacy">
+            <p>By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+        </div>
+
+        <!-- Social Signup Section -->
+        <div class="social-login">
+            <p>Or sign up with</p>
+            <button class="social-btn google">
+                <img src="google-icon.png" alt="Google"> Google
+            </button>
+            <button class="social-btn microsoft">
+                <img src="microsoft-icon.png" alt="Microsoft"> Microsoft
+            </button>
+            <button class="social-btn apple">
+                <img src="apple-icon.png" alt="Apple"> Apple
+            </button>
+        </div>
+
+        <!-- Login Link -->
+        <div class="login-link">
+            <p>Already have an account? <a href="login.html">Log in here</a></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Brainerzz. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Password Strength Checker
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirm-password');
+        const passwordStrength = document.getElementById('password-strength');
+        const passwordError = document.getElementById('password-error');
+
+        passwordInput.addEventListener('input', function() {
+            const strength = checkPasswordStrength(passwordInput.value);
+            passwordStrength.textContent = strength;
+            if (strength === 'Weak password') {
+                passwordStrength.style.color = 'red';
+            } else {
+                passwordStrength.style.color = 'green';
+            }
+        });
+
+        confirmPasswordInput.addEventListener('input', function() {
+            if (passwordInput.value !== confirmPasswordInput.value) {
+                passwordError.textContent = 'Passwords do not match.';
+                passwordError.style.color = 'red';
+            } else {
+                passwordError.textContent = '';
+            }
+        });
+
+        function checkPasswordStrength(password) {
+            const strongRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}$/;
+            if (password.length === 0) return '';
+            if (strongRegex.test(password)) return 'Strong password';
+            return 'Weak password';
+        }
+    </script>
+</body>
+</html>
