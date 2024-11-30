@@ -37,5 +37,5 @@ To set up the project locally, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Brainerzz/brainerzz.git
+   git clone https://github.com/JAGADISHSUNILPEDNEKAR/brainerzz.git
    cd brainerzz
