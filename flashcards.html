@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brainerzz - Flashcards</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
@@ -17,10 +18,46 @@
     </header>
     <main>
         <h2>Create Your Flashcards</h2>
-        <p>Here you can create and study flashcards!</p>
-        <div class="content">
-            <button>Create New Flashcards</button>
+        <p>Here you can create and study flashcards based on a topic or issue.</p>
+
+        <!-- User input form -->
+        <div class="input-container">
+            <input type="text" id="flashcard-topic" placeholder="Enter a topic or question...">
+            <button onclick="fetchFlashcardContent()">Submit</button>
+        </div>
+
+        <!-- Display the fetched response -->
+        <div id="flashcard-container">
+            <h3>Flashcard Content:</h3>
+            <p id="flashcard-text"></p>
         </div>
     </main>
+    <footer>
+        <p>&copy; 2024 Brainerzz. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Function to fetch flashcard content from the backend (ChatGPT API)
+        async function fetchFlashcardContent() {
+            const topic = document.getElementById('flashcard-topic').value;
+            if (!topic) {
+                alert('Please enter a topic or question!');
+                return;
+            }
+
+            // Sending the request to the backend
+            const response = await fetch('/get-chatgpt-response', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ description: topic })
+            });
+
+            // Process the response from the backend
+            const data = await response.json();
+            document.getElementById('flashcard-text').innerText = data.response;
+        }
+    </script>
 </body>
 </html>

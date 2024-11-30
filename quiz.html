@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brainerzz - Quiz</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
@@ -17,10 +18,46 @@
     </header>
     <main>
         <h2>Start Your Quiz</h2>
-        <p>Take a quiz to test your knowledge!</p>
-        <div class="content">
-            <button>Start Quiz</button>
+        <p>Get a customized quiz generated from your input!</p>
+
+        <!-- User input form -->
+        <div class="input-container">
+            <input type="text" id="quiz-topic" placeholder="Enter a topic for the quiz...">
+            <button onclick="fetchQuizQuestions()">Generate Quiz</button>
+        </div>
+
+        <!-- Display the fetched response -->
+        <div id="quiz-container">
+            <h3>Quiz Questions:</h3>
+            <p id="quiz-text"></p>
         </div>
     </main>
+    <footer>
+        <p>&copy; 2024 Brainerzz. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Function to fetch quiz questions from the backend (ChatGPT API)
+        async function fetchQuizQuestions() {
+            const topic = document.getElementById('quiz-topic').value;
+            if (!topic) {
+                alert('Please enter a topic for the quiz!');
+                return;
+            }
+
+            // Sending the request to the backend
+            const response = await fetch('/get-chatgpt-response', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ description: topic })
+            });
+
+            // Process the response from the backend
+            const data = await response.json();
+            document.getElementById('quiz-text').innerText = data.response;
+        }
+    </script>
 </body>
 </html>

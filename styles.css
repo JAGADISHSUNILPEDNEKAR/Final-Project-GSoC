@@ -224,11 +224,11 @@ header button:hover {
 }
 
 .social-btn.apple {
-    background-color: #000000; /* Apple Black */
+    background-color: #514e4e; /* Apple Black */
 }
 
 .social-btn.apple:hover {
-    background-color: #333333; /* Lighter Black */
+    background-color: #000000; /* Lighter Black */
 }
 
 /* Sign Up Link */
@@ -278,4 +278,343 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Additional Styling Enhancements */
+
+/* Signup Container */
+.signup-container {
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1); /* Add a more prominent shadow for depth */
+    padding: 40px; /* Slightly more padding for a spacious look */
+}
+
+/* Input Fields Styling */
+.signup-form input {
+    transition: all 0.3s ease; /* Smooth transition for focus state */
+    background-color: #f9f9f9; /* Light background for inputs to create contrast */
+}
+
+/* Input Focus State */
+.signup-form input:focus {
+    border-color: #4CAF50; /* Make the focus border green */
+    box-shadow: 0 0 10px rgba(33, 150, 243, 0.5); /* Slight glow effect for better focus visibility */
+}
+
+/* Enhanced Button Styling */
+.signup-btn {
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.signup-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Social Buttons */
+.social-btn {
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Input Focus Glow */
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    box-shadow: 0 0 5px rgba(0, 150, 136, 0.3);
+    outline: none;
+}
+
+/* General Button Hover Effects */
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px); /* Slight lift effect for all buttons */
+}
+
+/* Improved Error Message Styling */
+.password-error {
+    font-size: 14px;
+    color: red;
+    font-weight: 600;
+}
+
+/* Password Strength Indicator */
+.password-strength {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+/* Adjust Spacing for Better Readability */
+.signup-form label {
+    margin-bottom: 10px; /* Slightly more spacing between label and input */
+}
+
+.signup-container h2 {
+    font-size: 28px;
+    color: #1e0962;
+    margin-bottom: 20px; /* Spacing between title and form fields */
+}
+
+/* Footer */
+footer {
+    background-color: #1e0962;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    margin-top: 40px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional Animations for Button Hover */
+@keyframes button-hover {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+button {
+    animation: button-hover 0.4s ease-in-out;
+}
+
+/* Login link styling */
+.login-link a {
+    font-weight: 600;
+    color: #1e0962;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: #4CAF50; /* Change color on hover for better contrast */
+}
+
+/* Enhanced Input Padding for Better UI */
+input {
+    padding: 15px;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    background-color: #1e0962;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    margin-top: 40px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced Login Container */
+.login-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 15px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-align: center;
+    animation: slideIn 1s ease-in-out;
+}
+
+/* Form Inputs - Added light background and padding */
+.login-form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded corners */
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9; /* Light background for inputs */
+}
+
+/* Input Focus - Add focus effect with border and glow */
+.login-form input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 10px rgba(33, 150, 243, 0.5); /* Focus glow */
+    outline: none;
+}
+
+/* Login Button - Enhance with bold text and hover effect */
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Social Login Section - Added hover effects and spacing */
+.social-login {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-login p {
+    margin-bottom: 10px;
+    color: #777;
+}
+
+.social-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #f1f1f1;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded corners */
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.social-btn img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.social-btn:hover {
+    background-color: #ddd;
+}
+
+/* Sign Up Link - Added bold and color changes on hover */
+.signup-link {
+    margin-top: 20px;
+}
+
+.signup-link a {
+    color: #1e0962;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+    color: #4CAF50; /* Change color on hover */
+}
+
+/* Footer - Consistent with design */
+footer {
+    background-color: #1e0962;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    margin-top: 40px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations for smooth transitions */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enhanced Spacing for Better Layout */
+.login-container h2 {
+    font-size: 26px;
+    color: #1e0962;
+    margin-bottom: 20px; /* More space between heading and form */
+}
+
+.login-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Social Buttons */
+.social-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #f1f1f1;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded corners */
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.social-btn i {
+    font-size: 20px; /* Icon size */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.social-btn:hover {
+    background-color: #ddd;
+}
+/* Feature Buttons Section */
+.feature-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.feature-buttons button {
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    flex: 1 1 200px; /* Responsive design */
+    max-width: 300px; /* Optional: limit button width */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.feature-buttons button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
 }

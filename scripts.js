@@ -1,4 +1,4 @@
-// Navigation Function
+// Unified Navigation Function
 function navigateTo(page) {
     switch (page) {
         case 'login':
@@ -22,7 +22,22 @@ function navigateTo(page) {
         case 'more':
             window.location.href = 'more.html'; // Redirects to more features page
             break;
+        case 'mindMapping':
+            window.location.href = 'mindMapping.html'; // Redirect to Mind Mapping page
+            break;
+        case 'conceptCards':
+            window.location.href = 'conceptCards.html'; // Redirect to Concept Cards page
+            break;
+        case 'visualization':
+            window.location.href = 'visualization.html'; // Redirect to Visualization page
+            break;
+        case 'storytelling':
+            window.location.href = 'storytelling.html'; // Redirect to Storytelling page
+            break;
+        case 'connectExpert':
+            window.location.href = 'connectExpert.html'; // Redirect to Connect to an Expert page
+            break;
         default:
-            alert("Page not found!");
+            alert('Feature not available!');
     }
 }

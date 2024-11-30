@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brainerzz - More Features</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
@@ -15,12 +16,23 @@
             <button onclick="window.location.href='signup.html'">Sign Up</button>
         </div>
     </header>
+
     <main>
         <h2>Explore More Features</h2>
-        <p>Here are additional tools you can explore!</p>
-        <div class="content">
-            <button>Explore More</button>
+        <p>Enhance your learning experience with these additional tools:</p>
+
+        <!-- Feature Buttons -->
+        <div class="feature-buttons">
+            <button onclick="navigateTo('mindMapping')">Mind Mapping</button>
+            <button onclick="navigateTo('conceptCards')">Concept Cards</button>
+            <button onclick="navigateTo('visualization')">Visualization</button>
+            <button onclick="navigateTo('storytelling')">Storytelling</button>
+            <button onclick="navigateTo('connectExpert')">Connect to an Expert</button>
         </div>
     </main>
+
+    <footer>
+        <p>&copy; 2024 Brainerzz. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
