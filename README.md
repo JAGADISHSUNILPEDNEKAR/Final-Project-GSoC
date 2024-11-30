@@ -1,4 +1,11 @@
 # Brainerzz - Flashcard Website for Effective Exam Preparation
+Live Server : https://incredible-daffodil-552b7d.netlify.app/index.html
+
+PPT link :
+
+1. https://docs.google.com/presentation/d/1jPoqQBn_I45nn9afFOsditjbxaCydhXX/edit?usp=share_link&ouid=111601287789152105008&rtpof=true&sd=true
+
+2. https://docs.google.com/presentation/d/1jmsOdgrNSKhti2yL_I-Wf4PvBf2PAOI_/edit?usp=share_link&ouid=111601287789152105008&rtpof=true&sd=true
 
 ## Overview
 **Brainerzz** is designed to help students overcome exam anxiety by providing a platform where they can easily create interactive flashcards from lengthy study materials. This tool enhances their study process, making it more efficient and less intimidating, ultimately boosting their confidence and performance in exams.
